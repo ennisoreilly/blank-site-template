@@ -1,0 +1,72 @@
+
+
+.mobileNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue; /* CHANGES MOBILE TOPBAR COLOUR, CAN BE TRANSP */
+    padding: 1rem;
+}
+
+.desktopNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333; /* CHANGES DESKTOP TOPBAR COLOUR, CAN BE TRANSP */
+  padding: 1rem;
+}
+  
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* CHANGES MOBILE SLIDE-OUT MENU COLOUR, SHOULD NOT BE TRANSP */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
+    transition: opacity 0.01s, transform 0.1s;
+}
+
+.menuLink {
+    text-decoration: none;
+    font-size: 32px;
+    margin-top: 15px;
+    color: white; /* CHANGES MOBILE MENU TEXT, SHOULD NOT BE TRANSP */
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 22px;
+  color: white; /* CHANGES DESKTOP NAV TEXT, SHOULD NOT BE TRANSP */
+}
+
+.clearText {
+  color: transparent;
+}
+  
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+ 
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+.responsive_nav {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fade-in 0.3s ease-in-out;
+}
+  
